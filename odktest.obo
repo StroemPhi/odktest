@@ -1,0 +1,12 @@
+format-version: 1.2
+data-version: releases/2021-12-02
+ontology: odktest
+property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "ODK test ontology" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
+property_value: owl:versionInfo "2021-12-02" xsd:string
+
+[Term]
+id: ODKTEST:00000000
+name: root node
+
