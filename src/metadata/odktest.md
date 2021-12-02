@@ -30,6 +30,12 @@ products:
   - id: odktest/odktest-base.json
     name: "ODK test ontology additional release in OBOJSon format"
 dependencies:
+- id: bfo
+- id: ro
+- id: omo
+- id: obi
+- id: chmo
+- id: apollo_sv
 
 tracker: https://github.com/pstroem/odktest/issues
 license:

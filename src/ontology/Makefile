@@ -85,7 +85,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS = 
+IMPORTS =  bfo ro omo obi chmo apollo_sv
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -198,7 +198,7 @@ $(IMPORTSEED):  $(ALLSEED)
 	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
 
 
-ANNOTATION_PROPERTIES=
+ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
 
 # -- Generate Import Modules --
 #
@@ -208,6 +208,12 @@ ANNOTATION_PROPERTIES=
 imports/%_terms_combined.txt: $(IMPORTSEED) imports/%_terms.txt
 	if [ $(IMP) = true ]; then cat $^ | grep -v ^# | sort | uniq >  $@; fi
 
+
+imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T imports/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: imports/%_import.owl
 
@@ -233,6 +239,60 @@ refresh-%:
 IMP=true # Global parameter to bypass import generation
 MIR=true # Global parameter to bypass mirror generation
 IMP_LARGE=true # Global parameter to bypass handling of large imports
+
+
+## ONTOLOGY: bfo
+## Copy of bfo is re-downloaded whenever source changes
+mirror/bfo.trigger: $(SRC)
+
+mirror/bfo.owl: mirror/bfo.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/bfo.owl --create-dirs -o mirror/bfo.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/bfo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/bfo.owl
+
+
+## ONTOLOGY: ro
+## Copy of ro is re-downloaded whenever source changes
+mirror/ro.trigger: $(SRC)
+
+mirror/ro.owl: mirror/ro.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/ro.owl --create-dirs -o mirror/ro.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/ro.owl
+
+
+## ONTOLOGY: omo
+## Copy of omo is re-downloaded whenever source changes
+mirror/omo.trigger: $(SRC)
+
+mirror/omo.owl: mirror/omo.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/omo.owl --create-dirs -o mirror/omo.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/omo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/omo.owl
+
+
+## ONTOLOGY: obi
+## Copy of obi is re-downloaded whenever source changes
+mirror/obi.trigger: $(SRC)
+
+mirror/obi.owl: mirror/obi.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/obi.owl --create-dirs -o mirror/obi.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/obi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/obi.owl
+
+
+## ONTOLOGY: chmo
+## Copy of chmo is re-downloaded whenever source changes
+mirror/chmo.trigger: $(SRC)
+
+mirror/chmo.owl: mirror/chmo.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/chmo.owl --create-dirs -o mirror/chmo.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/chmo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/chmo.owl
+
+
+## ONTOLOGY: apollo_sv
+## Copy of apollo_sv is re-downloaded whenever source changes
+mirror/apollo_sv.trigger: $(SRC)
+
+mirror/apollo_sv.owl: mirror/apollo_sv.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/apollo_sv.owl --create-dirs -o mirror/apollo_sv.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/apollo_sv.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/apollo_sv.owl
 
 
 
