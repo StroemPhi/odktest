@@ -1,15 +1,302 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/odktest/imports/chmo_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/odktest/imports/chmo_import.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/odktest/imports/chmo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/odktest/releases/2021-12-02/imports/chmo_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-12-02</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/odktest/releases/2021-12-09/imports/chmo_import.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-12-09</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <oboInOwl:id>BFO:0000015</oboInOwl:id>
+        <rdfs:label>process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0000591 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000591">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0001806"/>
+        <obo:IAO_0000115>Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FIX:0000022</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>NMR</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>NMR spectrometry</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>NMR spectroscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>nuclear magnetic resonance (NMR) spectroscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>nuclear magnetic resonance spectrometry</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:id>CHMO:0000591</oboInOwl:id>
+        <rdfs:comment>NMR in practice usually refers to pulsed nuclear magnetic resonance spectrometry, CHMO:0000613</rdfs:comment>
+        <rdfs:label>nuclear magnetic resonance spectroscopy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000591"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0000598 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000598">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000613"/>
+        <obo:IAO_0000115>An NMR experiment in which a second frequency dimension is employed to disperse the signals and reveal correlations between interacting nuclei.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>2-D NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>2D NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>2D NMR spectrometry</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>2D NMR spectroscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>2D nuclear magnetic resonance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>2D nuclear magnetic resonance spectrometry</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>two-dimensional NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>two-dimensional nuclear magnetic resonance spectrometry</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>two-dimensional nuclear magnetic resonance spectroscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHMO:0000598</oboInOwl:id>
+        <rdfs:label>two-dimensional nuclear magnetic resonance spectroscopy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000598"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An NMR experiment in which a second frequency dimension is employed to disperse the signals and reveal correlations between interacting nuclei.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FIX:0000056</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0000601 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000601">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000931"/>
+        <obo:IAO_0000115>A type of heteronuclear NMR spectroscopy where a second frequency dimension is employed to disperse the signals and reveal correlations between protons and nuclei which are 2–3 bonds removed.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FIX:0000180</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>HMBC</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>HMBC NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHMO:0000601</oboInOwl:id>
+        <rdfs:label>heteronuclear multiple bond coherence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000601"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of heteronuclear NMR spectroscopy where a second frequency dimension is employed to disperse the signals and reveal correlations between protons and nuclei which are 2–3 bonds removed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0000613 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000613">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000591"/>
+        <obo:IAO_0000115>Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>NMR spectrometry</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>NMR spectroscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nuclear magnetic resonance spectrometry</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nuclear magnetic resonance spectroscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pulsed nuclear magnetic resonance spectrometry</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHMO:0000613</oboInOwl:id>
+        <rdfs:comment>this is what is usually meant nowadays by NMR.</rdfs:comment>
+        <rdfs:label>pulsed nuclear magnetic resonance spectroscopy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000613"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0000931 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000931">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000598"/>
+        <obo:IAO_0000115>Any type of heteronuclear NMR spectroscopy where a second frequency dimension is employed.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>heteronuclear 2D NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHMO:0000931</oboInOwl:id>
+        <rdfs:label>heteronuclear two-dimensional nuclear magnetic resonance spectroscopy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000931"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any type of heteronuclear NMR spectroscopy where a second frequency dimension is employed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FIX:0000147</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0001148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0001148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000601"/>
+        <obo:IAO_0000115>A type of heteronuclear NMR spectroscopy where a second frequency dimension is employed to disperse the signals and reveal correlations between protons and 13C nuclei which are 2 to 3 bonds removed.</obo:IAO_0000115>
+        <oboInOwl:created_by>https://orcid.org/0000-0001-5985-7429</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-03-11T05:06:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FIX:0001024</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>13C-1H HMBC</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>1H-13C HMBC</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>CHMO:0001148</oboInOwl:id>
+        <rdfs:label>1H–13C heteronuclear multiple bond coherence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0001148"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of heteronuclear NMR spectroscopy where a second frequency dimension is employed to disperse the signals and reveal correlations between protons and 13C nuclei which are 2 to 3 bonds removed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0001215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0001215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000115>Any technique which detects the response of spins to a perturbing magnetic field.</obo:IAO_0000115>
+        <oboInOwl:created_by>https://orcid.org/0000-0001-5985-7429</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-03-25T11:36:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>FIX:0000012</oboInOwl:hasAlternativeId>
+        <oboInOwl:id>CHMO:0001215</oboInOwl:id>
+        <rdfs:label>magnetic resonance method</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0001215"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any technique which detects the response of spins to a perturbing magnetic field.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-0640-0422</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0001806 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0001806">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0001215"/>
+        <obo:IAO_0000115>A technique or procedure applied in nuclear magnetic resonance experiments.</obo:IAO_0000115>
+        <oboInOwl:created_by>https://orcid.org/0000-0001-5985-7429</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-05-22T11:04:59Z</oboInOwl:creation_date>
+        <oboInOwl:id>CHMO:0001806</oboInOwl:id>
+        <rdfs:label>nuclear magnetic resonance method</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0001806"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A technique or procedure applied in nuclear magnetic resonance experiments.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <oboInOwl:hasAlternativeId>CHMO:0001840</oboInOwl:hasAlternativeId>
+        <oboInOwl:id>OBI:0000011</oboInOwl:id>
+        <rdfs:label>planned process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <obo:IAO_0000115>A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>CHMO:0000000</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHMO:0001133</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>measurement method</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>OBI:0000070</oboInOwl:id>
+        <rdfs:label>assay</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>obi:pppb</oboInOwl:hasDbXref>
+    </owl:Axiom>
 </rdf:RDF>
 
 
